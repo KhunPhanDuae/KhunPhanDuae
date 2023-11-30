@@ -1,2 +1,0 @@
-This is some example data stored in data.txt.
-You can replace this with any text you want.
