@@ -1,101 +1,33 @@
 <!DOCTYPE html>
-<html lang="blk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khun Phan Duae about အကျောင်ꩻခရာႏ</title>
-   <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-section {
-    padding: 20px;
-}
-
-footer {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-     
-   </style>
+    <title>Prevent Screenshot</title>
+    <style>
+        body {
+            user-select: none;
+            -webkit-user-select: none; /* Safari */
+            -webkit-touch-callout: none; /* Disable callouts for touch */
+        }
+    </style>
 </head>
 <body>
-
-<header>
-    <h1>ခွန်ဖန်ဒွဲ့ Website</h1>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
-<section id="home">
-    <h2>Who is KhunPhanDuae</h2>
-    <p>
-Khun Phan Duae is a Pa’o youth. He was born in 2001 in Kyaukkachar(ကျောက္ကချား)village, Pa’o Autonomous Region.He worked on language development and musical arts. Khun Phan Duae's best friends are Khun Kyaw Sein, Khun Nay Myo, Khun Maung Kyan, Khun Tun Oo, Khun Than Aung. Khun Phan Duae or ခွန်ဖန်ဒွဲ့ lived in Nam San Township as a child and studied in Yangon in 2014In 2017, I returned to Kyaukkachar village and spent a long time with RYPAK friends.In 2022-2023, I did charity work and wrote an online dictionary for the development of literature, art and Pa’o language.By 2024, due to the battle between the Pa’o National Liberation Army and the Military Council in southern Shan State, Myanmar, the situation in the community worsened, and he joined the army.</p>
-</section>
-
-<section id="about">
-    <h2>About Us</h2>
-    <p>Learn more about our mission and values.</p>
-</section>
-
-<section id="services">
-    <h2>Our Services</h2>
-    <ul>
-        <li>Service 1</li>
-        <li>Service 2</li>
-        <li>Service 3</li>
-    </ul>
-</section>
-
-<section id="contact">
-    <h2>Contact Us</h2>
-    <p>Feel free to reach out to us for more information.</p>
-    <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <input type="submit" value="Submit">
-    </form>
-</section>
-
-<footer>
-    <p>&copy; 2023 Your Website. All rights reserved.</p>
-</footer>
-
+    <h1>Prevent Screenshot Example</h1>
+    <p>This content is protected from being selected and copied.</p>
+    <script>
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'PrintScreen') {
+                alert('Screenshots are disabled.');
+                event.preventDefault();
+            }
+        });
+        document.addEventListener('keyup', function(event) {
+            if (event.key === 'PrintScreen') {
+                navigator.clipboard.writeText('');
+                alert('Screenshots are disabled.');
+            }
+        });
+    </script>
 </body>
-  </html>
-                  
+</html>
